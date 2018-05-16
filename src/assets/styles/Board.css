@@ -12,8 +12,8 @@ input {
     color: white;
 }
 .paper {
-    height: 85%;
-    width: 35%;
+    height: 650px;
+    width: 40%;
     display: inline-block;
     opacity: 0.95;
     margin-top: 2%;
@@ -47,8 +47,8 @@ input {
     right: 0;
 }
 .score {
-    margin: 7% 20%;
-    max-width: 80%;
+    flex: 1;
+    margin-top: 7%;
     color: rgb(0, 188, 212);
 }
 .wins {
