@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Score, Guess, GuessList } from './'
+import { Score, Display, Guess, GuessList } from './'
 import _ from 'lodash'
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import RaisedButton from 'material-ui/RaisedButton';
@@ -73,7 +73,7 @@ class Board extends Component {
             alert("Give it a fucking try first asshole")
         }
     }
-    
+
     render() {
         return (
             <MuiThemeProvider>
@@ -81,9 +81,9 @@ class Board extends Component {
                 <Paper className="paper" zDepth={2}>
                     <div className="container">
                         <div className="title">Guess the US State!</div>
-                        <div className="wordContainer">
-                            <div>{this.sendOutput()}</div>
-                        </div>
+                       <Display 
+                            output={this.sendOutput()}
+                        />
                         <Guess 
                             submitGuess={this.addGuess}
                             giveUp={this.reset}
