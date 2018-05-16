@@ -13,9 +13,10 @@ input {
 }
 .paper {
     height: 650px;
-    width: 40%;
+    width: 38%;
     display: inline-block;
     opacity: 0.95;
+    min-width: 300px;
     margin-top: 2%;
     justify-content: center;
     border: 1px solid rgb(0, 188, 212);
@@ -26,7 +27,7 @@ input {
     justify-content: center;
 }
 .wordContainer {
-    margin: 7% 20%;
+    margin: 5% 20%;
     font-size: 36px;
     max-width: 90%;
     color: rgb(0, 188, 212);
@@ -49,6 +50,7 @@ input {
 .score {
     flex: 1;
     margin-top: 7%;
+    margin-bottom: 10%;
     color: rgb(0, 188, 212);
 }
 .wins {
@@ -92,5 +94,5 @@ input {
     color: rgb(0, 188, 212);
     font-weight: bold;
     font-size: 36px;
-    margin-top: 3%;
+    margin-top: 7%;
 }
