@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import _ from 'lodash'
-import "../styles/Score.css"
 
 
 class Score extends Component {

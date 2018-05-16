@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
-import _ from "lodash"
-import "../styles/Guess.css"
-
+import TextField from 'material-ui/TextField';
+import {blue400, blue500} from 'material-ui/styles/colors';
 
 class Guess extends Component {
     constructor(props){
@@ -27,19 +26,19 @@ class Guess extends Component {
         if (guessLeft > 0){
             return (
                 <div>
-                    <div>Guesses Remaining: {guessLeft}</div>
-                    <input 
-                        class="balloon" id="planet" type="text" placeholder="Probably Earth" 
+                    <TextField
+                        hintText="Enter A Guess!"
                         value={this.state.currentGuess}
-                        placeholder="Guess"
-                        onChange={this.handleGuess} />
+                        underlineStyle={styles.underlineStyle}
+                        onChange={this.handleGuess} 
+                    />
+                    <div className="remaining">Remaining: {guessLeft}</div>
                 </div>
             );
         }else {
             return (
-                <div>
-                    Ya Lost. The word was "{word.toUpperCase()}"
-                    
+                <div className="loss">
+                    Ya Lost. The word was "{word.toUpperCase()}"          
                 </div>
             );
         }
@@ -48,3 +47,20 @@ class Guess extends Component {
 }
 
 export default Guess;
+
+const styles = {
+    textAlign: "center",
+    border: "1px solid rgb(0, 188, 212)",
+    errorStyle: {
+      color: blue400,
+    },
+    underlineStyle: {
+      borderColor: blue400,
+    },
+    floatingLabelStyle: {
+      color: blue400,
+    },
+    floatingLabelFocusStyle: {
+      color: blue500,
+    },
+  };

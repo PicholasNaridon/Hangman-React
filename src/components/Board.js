@@ -4,8 +4,12 @@ import GuessList from './GuessList'
 import Word from './Word'
 import Score from './Score'
 import _ from 'lodash'
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import RaisedButton from 'material-ui/RaisedButton';
+import Paper from 'material-ui/Paper';
 import "../styles/Board.css"
 
+  
 const state_list = ["Alaska", "Alabama", "Arkansas", "Arizona", "California", "Colorado", "Connecticut", "Delaware", "Florida", "Georgia", "Guam", "Hawaii", "Iowa", "Idaho", "Illinois", "Indiana", "Kansas", "Kentucky", "Louisiana", "Massachusetts", "Maryland", "Maine", "Michigan", "Minnesota", "Missouri", "Mississippi", "Montana", "NorthCarolina", "NorthDakota", "Nebraska", "NewHampshire", "NewJersey", "NewMexico", "Nevada", "NewYork", "Ohio", "Oklahoma", "Oregon", "Pennsylvania", "Puerto Rico", "RhodeIsland", "SouthCarolina", "SouthDakota", "Tennessee", "Texas", "Utah", "Virginia", "Vermont", "Washington", "Wisconsin", "WestVirginia", "Wyoming"]
 
 class Board extends Component {
@@ -44,7 +48,7 @@ class Board extends Component {
 
           _.forEach(lets, function(value){
               if (_.includes(cor, value)){
-                  output += value + " "
+                  output += value.toUpperCase() + " "
               }else {
                   output += "_ "
               }
@@ -63,7 +67,7 @@ class Board extends Component {
       reset(){
           if (this.state.guesses.length > 0 ){
             this.setState({
-                losses: this.state.losses -= 1,
+                losses: this.state.losses += 1,
                 letters: (_.sample(state_list).toLowerCase()).split(""),
                 guesses: [],
                 correct: []
@@ -76,41 +80,51 @@ class Board extends Component {
 
     render() {
         return (
-            <div className="container">
-                <h1>Guess the US State!</h1>
-                    <Word 
-                        output={this.sendOutput()}
+            <MuiThemeProvider>
+                <div class="background"></div>
+                <Paper style={mainPaperStyle} zDepth={2}>
+                    <div class="container">
+                        <div className="title">Guess the US State!</div>
+                        <Word 
+                            output={this.sendOutput()}
                         />
-                   
-                    <GuessList 
-                        currentGuessList={this.state.guesses}
-                        currentCorrect={this.state.correct}
-                        theLetters={this.state.letters}
-                        correctAnswers={this.state.correctAnswers}
+                        <GuessList 
+                            currentGuessList={this.state.guesses}
+                            currentCorrect={this.state.correct}
+                            theLetters={this.state.letters}
+                            correctAnswers={this.state.correctAnswers}
                         />
-                    <Guess 
-                        submitGuess={this.addGuess}
-                        giveUp={this.reset}
-                        currentGuessList={this.state.guesses}
-                        theLetters={this.state.letters}
-                        restart={this.gameOver}
+                        <Guess 
+                            submitGuess={this.addGuess}
+                            giveUp={this.reset}
+                            currentGuessList={this.state.guesses}
+                            theLetters={this.state.letters}
+                            restart={this.gameOver}
                         />
-                         <Score 
-                        output={this.sendOutput()}
-                        count={this.state.letters}
-                        wins={this.state.wins}
-                        losses={this.state.losses}
-                        changeScore={this.updateScore}
+                        <Score 
+                            output={this.sendOutput()}
+                            count={this.state.letters}
+                            wins={this.state.wins}
+                            losses={this.state.losses}
+                            changeScore={this.updateScore}
                         />
-              
-                <   div>{this.state.remainingGuesses}</div>
-                    <div>
-                        <button onClick={this.reset}>Reset</button>
+                        <RaisedButton label="Next Word" primary={true} onClick={this.reset} />
                     </div>
-            </div>
+                 </Paper>
+            </MuiThemeProvider>
         );
     }
 }
 
 export default Board;
 
+const mainPaperStyle= {
+    height: 900,
+    width: 700,
+    margin: 20,
+    display: 'inline-block',
+    opacity: 0.95,
+    marginTop: '5%',
+    justifyContent: 'center',
+    border: "1px solid rgb(0, 188, 212)"
+  };
