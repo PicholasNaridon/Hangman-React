@@ -46,7 +46,6 @@ class Board extends Component {
           var cor = this.state.correct
           var lets = this.state.letters
           var output = ""
-
           _.forEach(lets, function(value){
               if (_.includes(cor, value)){
                   ding.play()
@@ -57,7 +56,6 @@ class Board extends Component {
           })
           return output
       }
-
       updateScore(){
             this.setState({
                 wins: this.state.wins += 1,
