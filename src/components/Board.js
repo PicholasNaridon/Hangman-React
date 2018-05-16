@@ -99,7 +99,7 @@ class Board extends Component {
                             losses={this.state.losses}
                             changeScore={this.updateScore}
                         />
-                        <RaisedButton style={{margin: "1.5%"}} label="Next Word" primary={true} onClick={this.reset} />
+                        <RaisedButton  label="Next Word" primary={true} onClick={this.reset} />
                     </div>
                  </Paper>
             </MuiThemeProvider>
