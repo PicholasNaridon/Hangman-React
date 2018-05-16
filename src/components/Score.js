@@ -2,11 +2,9 @@ import React, { Component } from 'react';
 
 
 class Score extends Component {
-
     handleScoreChange() {
         this.props.changeScore()
     }
-    
     render() {
         if (this.props.output.includes("_")){
             return (

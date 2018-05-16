@@ -90,22 +90,17 @@ class Board extends Component {
                         <Word 
                             output={this.sendOutput()}
                         />
+                        <GuessList 
+                            currentGuessList={this.state.guesses}
+                        />
                         <Guess 
                             submitGuess={this.addGuess}
                             giveUp={this.reset}
                             currentGuessList={this.state.guesses}
                             theLetters={this.state.letters}
-                            restart={this.gameOver}
-                        />
-                        <GuessList 
-                            currentGuessList={this.state.guesses}
-                            currentCorrect={this.state.correct}
-                            theLetters={this.state.letters}
-                            correctAnswers={this.state.correctAnswers}
                         />
                         <Score 
                             output={this.sendOutput()}
-                            count={this.state.letters}
                             wins={this.state.wins}
                             losses={this.state.losses}
                             changeScore={this.updateScore}
