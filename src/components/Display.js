@@ -1,13 +1,11 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-class Display extends Component {
-    render() {
-        return (
-            <div className="wordContainer">
-                <div>{this.props.output}</div>
-            </div>
-        );
-    }
-}
+const Display = (props) => {
+    return (
+        <div className="wordContainer">
+            <div>{props.output}</div>
+        </div>
+    );
+};
 
 export default Display;

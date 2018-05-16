@@ -1,17 +1,11 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-class GuessList extends Component {
-    constructor(props) {
-        super(props)
-    }
-
-    render() {
-        return (
-            <div className="guesses">
-                <div className="guessedLetters">{this.props.currentGuessList.join(", ").toUpperCase()}</div>
-            </div>
-        );
-    }
-}
+const GuessList = (props) => {
+    return (
+        <div className="guesses">
+            <div className="guessedLetters">{props.currentGuessList.join(", ").toUpperCase()}</div>
+        </div>
+    );
+};
 
 export default GuessList;
