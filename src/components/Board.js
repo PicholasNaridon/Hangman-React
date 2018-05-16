@@ -37,6 +37,7 @@ class Board extends Component {
             correct: _.xor(intersec)
         })
     }
+
     sendOutput(){
         var cor = this.state.correct
         var lets = this.state.letters
@@ -50,6 +51,7 @@ class Board extends Component {
         })
         return output
     }
+
     updateScore(){
         this.setState({
             wins: this.state.wins += 1,
@@ -58,6 +60,7 @@ class Board extends Component {
             correct: []
         })
     }
+
     reset(){
         if (this.state.guesses.length > 0 ){
         this.setState({
@@ -70,6 +73,7 @@ class Board extends Component {
             alert("Give it a fucking try first asshole")
         }
     }
+    
     render() {
         return (
             <MuiThemeProvider>
