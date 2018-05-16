@@ -9,19 +9,24 @@ class Guess extends Component {
             currentGuess: '',
         }
         this.handleGuess = this.handleGuess.bind(this)
+        this.calcGuessLeft = this.calcGuessLeft.bind(this)
+        this.theWord = this.theWord.bind(this)
     }
     handleGuess(e){
-        console.log(e.target.value)
         var guess = e.target.value
         this.props.submitGuess(guess)
         this.setState({
             currentGuess: ''
         })
     }
+    calcGuessLeft(){
+        return this.props.theLetters.length - this.props.currentGuessList.length
+    }
+    theWord(){
+        return this.props.theLetters.toUpperCase()
+    }
     render() {
-        var guessLeft = this.props.theLetters.length - this.props.currentGuessList.length
-        var word = this.props.theLetters.join("")
-        if (guessLeft > 0){
+        if (this.calcGuessLeft() > 0){
             return (
                 <div>
                     <TextField
@@ -29,13 +34,13 @@ class Guess extends Component {
                         underlineStyle={{borderColor: blue400}}
                         onChange={this.handleGuess} 
                     />
-                    <div className="remaining">Remaining: {guessLeft}</div>
+                    <div className="remaining">Remaining: {this.calcGuessLeft()}</div>
                 </div>
             );
         }else {
             return (
                 <div className="loss">
-                    Ya Lost. The word was "{word.toUpperCase()}"          
+                    Ya Lost. The word was "{this.theWord()}"          
                 </div>
             );
         }
