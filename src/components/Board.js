@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {Score, Guess, GuessList, Word} from './index.js'
+import { Score, Guess, GuessList } from './index.js'
 import _ from 'lodash'
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import RaisedButton from 'material-ui/RaisedButton';
@@ -19,7 +19,6 @@ class Board extends Component {
             wins: 0,
             losses: 0
         }
-
         this.addGuess = this.addGuess.bind(this)
         this.sendOutput = this.sendOutput.bind(this)
         this.updateScore = this.updateScore.bind(this)
@@ -76,12 +75,12 @@ class Board extends Component {
         return (
             <MuiThemeProvider>
                 <div class="background"></div>
-                <Paper className="paper"  zDepth={2}>
-                    <div class="container">
+                <Paper className="paper" zDepth={2}>
+                    <div className="container">
                         <div className="title">Guess the US State!</div>
-                        <Word 
-                            output={this.sendOutput()}
-                        />
+                        <div className="wordContainer">
+                            <div>{this.sendOutput()}</div>
+                        </div>
                         <Guess 
                             submitGuess={this.addGuess}
                             giveUp={this.reset}
