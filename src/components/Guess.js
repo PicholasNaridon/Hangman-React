@@ -32,6 +32,7 @@ class Guess extends Component {
                 <div>
                     <TextField
                         value={this.state.currentGuess}
+                        hintText={"Guess"}
                         underlineStyle={{borderColor: blue400}}
                         onChange={this.handleGuess} 
                     />
