@@ -8,12 +8,10 @@ class Guess extends Component {
         this.state = {
             currentGuess: '',
         }
-        
         this.handleGuess = this.handleGuess.bind(this)
         this.calcGuessLeft = this.calcGuessLeft.bind(this)
         this.theWord = this.theWord.bind(this)
     }
-
     handleGuess(e){
         var guess = e.target.value
         this.props.submitGuess(guess)
@@ -21,15 +19,13 @@ class Guess extends Component {
             currentGuess: ''
         })
     }
-
     calcGuessLeft(){
-        return this.props.theLetters.length - this.props.currentGuessList.length
+        return (this.props.theLetters.length - this.props.currentGuessList.length)
     }
-
     theWord(){
-        return this.props.theLetters.toUpperCase()
+        var word = this.props.theLetters.join("")
+        return word.toUpperCase()
     }
-
     render() {
         if (this.calcGuessLeft() > 0){
             return (
