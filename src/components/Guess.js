@@ -19,7 +19,6 @@ class Guess extends Component {
         })
     }
 
-
     render() {
         var guessLeft = this.props.theLetters.length - this.props.currentGuessList.length
         var word = this.props.theLetters.join("")
@@ -27,8 +26,6 @@ class Guess extends Component {
             return (
                 <div>
                     <TextField
-                        inputStyle={{textAlign: "center"}}
-                        hintText="Enter A Guess!"
                         value={this.state.currentGuess}
                         underlineStyle={styles.underlineStyle}
                         onChange={this.handleGuess} 

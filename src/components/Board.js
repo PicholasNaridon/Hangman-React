@@ -110,7 +110,7 @@ class Board extends Component {
                             losses={this.state.losses}
                             changeScore={this.updateScore}
                         />
-                        <RaisedButton label="Next Word" primary={true} onClick={this.reset} />
+                        <RaisedButton style={{margin: "3%"}} label="Next Word" primary={true} onClick={this.reset} />
                     </div>
                  </Paper>
             </MuiThemeProvider>
@@ -121,8 +121,8 @@ class Board extends Component {
 export default Board;
 
 const mainPaperStyle= {
-    height: 900,
-    width: 700,
+    height: "85%",
+    width: "35%",
     margin: 20,
     display: 'inline-block',
     opacity: 0.95,
