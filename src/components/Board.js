@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Score, Guess, GuessList } from './index.js'
+import { Score, Guess, GuessList } from './'
 import _ from 'lodash'
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import RaisedButton from 'material-ui/RaisedButton';
