@@ -18,7 +18,6 @@ class Guess extends Component {
             currentGuess: ''
         })
     }
-
     render() {
         var guessLeft = this.props.theLetters.length - this.props.currentGuessList.length
         var word = this.props.theLetters.join("")
@@ -27,7 +26,7 @@ class Guess extends Component {
                 <div>
                     <TextField
                         value={this.state.currentGuess}
-                        underlineStyle={styles.underlineStyle}
+                        underlineStyle={{borderColor: blue400}}
                         onChange={this.handleGuess} 
                     />
                     <div className="remaining">Remaining: {guessLeft}</div>
@@ -45,18 +44,3 @@ class Guess extends Component {
 }
 
 export default Guess;
-
-const styles = {
-    errorStyle: {
-      color: blue400,
-    },
-    underlineStyle: {
-      borderColor: blue400,
-    },
-    floatingLabelStyle: {
-      color: blue400,
-    },
-    floatingLabelFocusStyle: {
-      color: blue500,
-    },
-  };

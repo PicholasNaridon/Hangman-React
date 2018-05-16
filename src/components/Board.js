@@ -1,8 +1,5 @@
 import React, { Component } from 'react';
-import Guess from './Guess'
-import GuessList from './GuessList'
-import Word from './Word'
-import Score from './Score'
+import {Score, Guess, GuessList, Word} from './index.js'
 import _ from 'lodash'
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import RaisedButton from 'material-ui/RaisedButton';
@@ -11,7 +8,6 @@ import "../assets/styles/Board.css"
 
   
 const state_list = ["Alaska", "Alabama", "Arkansas", "Arizona", "California", "Colorado", "Connecticut", "Delaware", "Florida", "Georgia", "Guam", "Hawaii", "Iowa", "Idaho", "Illinois", "Indiana", "Kansas", "Kentucky", "Louisiana", "Massachusetts", "Maryland", "Maine", "Michigan", "Minnesota", "Missouri", "Mississippi", "Montana", "NorthCarolina", "NorthDakota", "Nebraska", "NewHampshire", "NewJersey", "NewMexico", "Nevada", "NewYork", "Ohio", "Oklahoma", "Oregon", "Pennsylvania", "Puerto Rico", "RhodeIsland", "SouthCarolina", "SouthDakota", "Tennessee", "Texas", "Utah", "Virginia", "Vermont", "Washington", "Wisconsin", "WestVirginia", "Wyoming"]
-const ding = new Audio("../assets/sounds/ding.mp3")
 
 class Board extends Component {
     constructor(props){
@@ -48,7 +44,6 @@ class Board extends Component {
           var output = ""
           _.forEach(lets, function(value){
               if (_.includes(cor, value)){
-                  ding.play()
                   output += value.toUpperCase() + " "
               }else {
                   output += "_ "
@@ -77,12 +72,11 @@ class Board extends Component {
           }
       }
 
-
     render() {
         return (
             <MuiThemeProvider>
                 <div class="background"></div>
-                <Paper style={mainPaperStyle} zDepth={2}>
+                <Paper className="paper"  zDepth={2}>
                     <div class="container">
                         <div className="title">Guess the US State!</div>
                         <Word 
@@ -113,13 +107,4 @@ class Board extends Component {
 
 export default Board;
 
-const mainPaperStyle= {
-    height: "85%",
-    width: "35%",
-    margin: 20,
-    display: 'inline-block',
-    opacity: 0.95,
-    marginTop: '5%',
-    justifyContent: 'center',
-    border: "1px solid rgb(0, 188, 212)"
-  };
+
