@@ -60,7 +60,7 @@ input {
     font-size: 16px;
 }
 .guessedLetters{
-    padding-top: 10%;
+    padding-top: 7%;
     font-size: 20px;
 }
 .remaining { 
@@ -85,7 +85,7 @@ input {
     background-color: rgb(0, 188, 212);
     color: white;
     font-size: 20px;
-    height: 150px;
+    height: 75px;
     margin: 3% 20%;
 }
 .title {
