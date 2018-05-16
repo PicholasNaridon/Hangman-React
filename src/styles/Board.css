@@ -21,6 +21,7 @@ input {
     margin: 7% 20%;
     font-size: 36px;
     max-width: 90%;
+    color: rgb(0, 188, 212);
 }
 .background{
     position: absolute;
@@ -37,9 +38,24 @@ input {
 }
 .score {
     margin: 7% 20%;
-    border: 1px solid rgb(0, 188, 212);
     max-width: 80%;
+    color: rgb(0, 188, 212);
+}
+.wins {
+    color: rgb(164, 198, 57);
+    font-size: 16px;
+}
+.losses {
+    color: rgb(255, 64, 129);
+    font-size: 16px;
 
+}
+.guessedLetters{
+    font-size: 20px;
+}
+.remaining { 
+    color: rgb(0, 188, 212);
+    font-size: 16px;
 }
 .loss {
     color: rgb(255, 64, 129);

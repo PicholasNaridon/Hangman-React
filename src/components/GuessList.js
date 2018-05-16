@@ -11,8 +11,8 @@ class GuessList extends Component {
     render() {
         return (
             <div className="guesses">
-                <h3>Already Used: </h3>
-                <div>{this.props.currentGuessList.join(", ").toUpperCase()}</div>
+                <h3>Guesses </h3>
+                <div className="guessedLetters">{this.props.currentGuessList.join(", ").toUpperCase()}</div>
             </div>
         );
     }

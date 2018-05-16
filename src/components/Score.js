@@ -12,8 +12,8 @@ class Score extends Component {
             return (
                 <div className="score">
                     <h1>Score: </h1>
-                    <h4>{this.props.wins} Wins</h4>  
-                    <h4>{this.props.losses} Losses</h4>  
+                    <h4 className="wins">{this.props.wins} Wins</h4>  
+                    <h4 className="losses">{this.props.losses} Losses</h4>  
                 </div>
             )
         }else {
