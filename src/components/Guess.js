@@ -27,6 +27,7 @@ class Guess extends Component {
             return (
                 <div>
                     <TextField
+                        inputStyle={{textAlign: "center"}}
                         hintText="Enter A Guess!"
                         value={this.state.currentGuess}
                         underlineStyle={styles.underlineStyle}
@@ -49,8 +50,6 @@ class Guess extends Component {
 export default Guess;
 
 const styles = {
-    textAlign: "center",
-    border: "1px solid rgb(0, 188, 212)",
     errorStyle: {
       color: blue400,
     },

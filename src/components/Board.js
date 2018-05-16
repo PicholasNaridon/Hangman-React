@@ -7,10 +7,11 @@ import _ from 'lodash'
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import RaisedButton from 'material-ui/RaisedButton';
 import Paper from 'material-ui/Paper';
-import "../styles/Board.css"
+import "../assets/styles/Board.css"
 
   
 const state_list = ["Alaska", "Alabama", "Arkansas", "Arizona", "California", "Colorado", "Connecticut", "Delaware", "Florida", "Georgia", "Guam", "Hawaii", "Iowa", "Idaho", "Illinois", "Indiana", "Kansas", "Kentucky", "Louisiana", "Massachusetts", "Maryland", "Maine", "Michigan", "Minnesota", "Missouri", "Mississippi", "Montana", "NorthCarolina", "NorthDakota", "Nebraska", "NewHampshire", "NewJersey", "NewMexico", "Nevada", "NewYork", "Ohio", "Oklahoma", "Oregon", "Pennsylvania", "Puerto Rico", "RhodeIsland", "SouthCarolina", "SouthDakota", "Tennessee", "Texas", "Utah", "Virginia", "Vermont", "Washington", "Wisconsin", "WestVirginia", "Wyoming"]
+const ding = new Audio("../assets/sounds/ding.mp3")
 
 class Board extends Component {
     constructor(props){
@@ -48,6 +49,7 @@ class Board extends Component {
 
           _.forEach(lets, function(value){
               if (_.includes(cor, value)){
+                  ding.play()
                   output += value.toUpperCase() + " "
               }else {
                   output += "_ "
