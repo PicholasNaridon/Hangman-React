@@ -1,12 +1,11 @@
 import React, { Component } from 'react';
-import { Score, Display, Guess, GuessList } from './'
+import { Score, Display, EnterGuess, GuessList } from './'
 import _ from 'lodash'
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import RaisedButton from 'material-ui/RaisedButton';
 import Paper from 'material-ui/Paper';
 import "../assets/styles/Board.css"
 
-  
 const state_list = ["Alaska", "Alabama", "Arkansas", "Arizona", "California", "Colorado", "Connecticut", "Delaware", "Florida", "Georgia", "Guam", "Hawaii", "Iowa", "Idaho", "Illinois", "Indiana", "Kansas", "Kentucky", "Louisiana", "Massachusetts", "Maryland", "Maine", "Michigan", "Minnesota", "Missouri", "Mississippi", "Montana", "NorthCarolina", "NorthDakota", "Nebraska", "NewHampshire", "NewJersey", "NewMexico", "Nevada", "NewYork", "Ohio", "Oklahoma", "Oregon", "Pennsylvania", "Puerto Rico", "RhodeIsland", "SouthCarolina", "SouthDakota", "Tennessee", "Texas", "Utah", "Virginia", "Vermont", "Washington", "Wisconsin", "WestVirginia", "Wyoming"]
 
 class Board extends Component {
@@ -84,7 +83,7 @@ class Board extends Component {
                        <Display 
                             output={this.sendOutput()}
                         />
-                        <Guess 
+                        <EnterGuess 
                             submitGuess={this.addGuess}
                             giveUp={this.reset}
                             currentGuessList={this.state.guesses}
