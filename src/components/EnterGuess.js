@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import TextField from 'material-ui/TextField';
 import {blue400, blue500} from 'material-ui/styles/colors';
 
-class Guess extends Component {
+class EnterGuess extends Component {
     constructor(props){
         super(props)
         this.state = {
@@ -50,4 +50,4 @@ class Guess extends Component {
     }
 }
 
-export default Guess;
+export default EnterGuess;
