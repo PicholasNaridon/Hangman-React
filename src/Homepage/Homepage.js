@@ -5,23 +5,21 @@ import { Grid, Col, Row, Nav, Navbar, NavItem } from 'react-bootstrap'
 const Homepage = () => {
     return (
         <div class="outter">
-            <Grid fluid>
+            <Grid fluid className="topBorder">
                 <Row className="navbar">
-                    <Col lg={1} >
-                    </Col>
-                    <Col lg={2}>
+                    <Col xs={12} sm={4} md={3} lg={2}>
                         <div className="navbar-title">
                             Nick Paridon
                         </div>
                     </Col>
-                    <Col lg={3} lgOffset={4}>
-                        <ul>
-                            <li><Link to="/">About Me </Link></li>   
-                            <li><Link to="/Portfolio">Portfolio </Link></li> 
-                            <li><Link to="/Contact">Contact</Link></li>   
-                        </ul>
-                    </Col>
-                    <Col lg={2}>
+                    <Col xs={12} sm={4} md={3} lg={2} >
+                        <div className="navbar-links">
+                            <ul >
+                                <li><Link to="/">About Me </Link></li>   
+                                <li><Link to="/Portfolio">Portfolio </Link></li> 
+                                <li><Link to="/Contact">Contact</Link></li>   
+                            </ul>
+                        </div>
                     </Col>
                 </Row>
             </Grid>

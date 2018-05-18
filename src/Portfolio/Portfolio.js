@@ -8,9 +8,7 @@ const Portfolio = () => {
         <div class="outter">
             <Grid fluid>
                 <Row className="navbar">
-                    <Col lg={1} >
-                    </Col>
-                    <Col lg={2}>
+                    <Col lgOffset={1} lg={2}>
                         <div className="navbar-title">
                             Nick Paridon
                         </div>
@@ -21,8 +19,6 @@ const Portfolio = () => {
                             <li><Link to="/Portfolio">Portfolio </Link></li> 
                             <li><Link to="/Contact">Contact</Link></li>   
                         </ul>
-                    </Col>
-                    <Col lg={2}>
                     </Col>
                 </Row>
             </Grid>

@@ -86,16 +86,24 @@ p {
   text-align: left;
 }
 .navbar {
-  border-bottom: 5px solid #666666;
   height: 90px;
   padding-bottom: 0;
+  margin-bottom: 0px;
+}
+.topBorder {
+  border-bottom: 5px solid #666666;
+
 }
 .navbar-title {
   background-color: #4aaaa5;
   color: white;
   padding-top: 20px;
   height: 76px;
-  width: 150px;
+  margin-bottom: 0px;
+}
+.navbar-links {
+  padding-top: 20px;
+  height: 76px;
   margin-bottom: 0px;
 }
 li {
