@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
 import { Score, DisplayWord, EnterGuess, GuessList } from './'
 import _ from 'lodash'
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-import RaisedButton from 'material-ui/RaisedButton';
-import Paper from 'material-ui/Paper';
+import { Panel, Button, Grid, Col, Row } from 'react-bootstrap'
+import 'bootstrap/dist/css/bootstrap.min.css';
 import "../assets/styles/Board.css"
 
 const state_list = ["Alaska", "Alabama", "Arkansas", "Arizona", "California", "Colorado", "Connecticut", "Delaware", "Florida", "Georgia", "Guam", "Hawaii", "Iowa", "Idaho", "Illinois", "Indiana", "Kansas", "Kentucky", "Louisiana", "Massachusetts", "Maryland", "Maine", "Michigan", "Minnesota", "Missouri", "Mississippi", "Montana", "NorthCarolina", "NorthDakota", "Nebraska", "NewHampshire", "NewJersey", "NewMexico", "Nevada", "NewYork", "Ohio", "Oklahoma", "Oregon", "Pennsylvania", "Puerto Rico", "RhodeIsland", "SouthCarolina", "SouthDakota", "Tennessee", "Texas", "Utah", "Virginia", "Vermont", "Washington", "Wisconsin", "WestVirginia", "Wyoming"]
@@ -75,33 +74,35 @@ class Board extends Component {
 
     render() {
         return (
-            <MuiThemeProvider>
-                <div class="background"></div>
-                <Paper className="paper" zDepth={2}>
-                    <div className="container">
-                        <div className="title">Guess the US State!</div>
-                       <DisplayWord
-                            output={this.sendOutput()}
-                        />
-                        <EnterGuess 
-                            submitGuess={this.addGuess}
-                            giveUp={this.reset}
-                            currentGuessList={this.state.guesses}
-                            theLetters={this.state.letters}
-                        />
-                        <GuessList 
-                            currentGuessList={this.state.guesses}
-                        />
-                        <Score 
-                            output={this.sendOutput()}
-                            wins={this.state.wins}
-                            losses={this.state.losses}
-                            changeScore={this.updateScore}
-                        />
-                        <RaisedButton  label="Next Word" primary={true} onClick={this.reset} />
-                    </div>
-                 </Paper>
-            </MuiThemeProvider>
+            <div>
+            <div className="background"></div>
+                    <Row className="show-grid" style={{justifyContent: "center"}}>
+                        <Col  xs={11} sm={10}  md={9} lg={4} >
+                            <div className="boardWrapper">
+                                <div className="title">Guess the US State!</div>
+                                <DisplayWord
+                                    output={this.sendOutput()}
+                                />
+                                <EnterGuess 
+                                    submitGuess={this.addGuess}
+                                    giveUp={this.reset}
+                                    currentGuessList={this.state.guesses}
+                                    theLetters={this.state.letters}
+                                />
+                                <GuessList 
+                                    currentGuessList={this.state.guesses}
+                                />
+                                <Score 
+                                    output={this.sendOutput()}
+                                    wins={this.state.wins}
+                                    losses={this.state.losses}
+                                    changeScore={this.updateScore}
+                                />
+                                <Button style={{backgroundColor: "rgb(0, 188, 212)", color: "white"}} onClick={this.reset}>Next Word </Button>
+                            </div>
+                        </Col>
+                    </Row>
+            </div>
         );
     }
 }

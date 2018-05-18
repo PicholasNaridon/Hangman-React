@@ -11,21 +11,15 @@ input {
     background-color: whte;
     color: white;
 }
-.paper {
-    height: 650px;
-    width: 38%;
-    display: inline-block;
+.boardWrapper {
+    background: white;
     opacity: 0.95;
-    min-width: 300px;
-    margin-top: 2%;
-    justify-content: center;
-    border: 1px solid rgb(0, 188, 212);
+    padding: 20px;
+    margin-top: 15%;
 }
-.containter {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
+
+
+
 .wordContainer {
     margin: 5% 20%;
     font-size: 36px;
@@ -39,7 +33,7 @@ input {
     height: 100%;
     background-image: url("../images/usMapass.png");
     background-repeat:no-repeat;
-    background-size:contain;
+    background-size: cover;
     background-position:center;
     opacity: 0.7;
     top: 0;

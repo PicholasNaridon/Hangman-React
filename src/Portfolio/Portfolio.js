@@ -1,27 +1,31 @@
 import React from 'react';
-import Homepage from '../Homepage/Homepage'
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-import "../assets/styles/static.css"
-import Board from '../Hangman/Board'
+import { Link } from "react-router-dom";
+import { Grid, Col, Row, Nav, Navbar, NavItem } from 'react-bootstrap'
 
 
 const Portfolio = () => {
     return (
-        <div>
-            <nav className="navbar navbar-default">
-                <div className="container-fluid">
-                    <div className="navbar-header">
-                        <div className="navbar-text" id="navtitle">
+        <div class="outter">
+            <Grid fluid>
+                <Row className="navbar">
+                    <Col lg={1} >
+                    </Col>
+                    <Col lg={2}>
+                        <div className="navbar-title">
                             Nick Paridon
                         </div>
-                    </div>
-                    <ul className="nav navbar-nav navbar-right">
-                    <li><Link to="/">Home</Link></li>
-                    <li><Link to="/Contact">Contact</Link></li>
-                    <li><Link to="/Portfolio">Portfolio</Link></li>
-                    </ul>
-                </div>
-            </nav>
+                    </Col>
+                    <Col lg={3} lgOffset={4}>
+                        <ul>
+                            <li><Link to="/">About Me </Link></li>   
+                            <li><Link to="/Portfolio">Portfolio </Link></li> 
+                            <li><Link to="/Contact">Contact</Link></li>   
+                        </ul>
+                    </Col>
+                    <Col lg={2}>
+                    </Col>
+                </Row>
+            </Grid>
             <div className="container">
                 <div className="row" >
                     <h3>Portfolio</h3>

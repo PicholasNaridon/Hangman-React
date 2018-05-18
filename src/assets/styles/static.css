@@ -1,4 +1,4 @@
-footer {
+/* footer {
   margin-top: 20px;
   position: fixed;
   bottom: -30px;
@@ -74,4 +74,33 @@ h3 {
 }
 .card-img-top {
   max-width: 100%;
+} */
+.myPicture{
+  float: left;
+  width: 250px;
+  height: 260px;
+  margin: 20px;
+}
+p {
+  font-size: 18px;
+  text-align: left;
+}
+.navbar {
+  border-bottom: 5px solid #666666;
+  height: 90px;
+  padding-bottom: 0;
+}
+.navbar-title {
+  background-color: #4aaaa5;
+  color: white;
+  padding-top: 20px;
+  height: 76px;
+  width: 150px;
+  margin-bottom: 0px;
+}
+li {
+  display: inline;
+}
+.outter {
+  background: #ddd
 }

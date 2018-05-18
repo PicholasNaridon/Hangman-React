@@ -1,29 +1,34 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-import "../assets/styles/Board.css"
+import { Grid, Col, Row, Navbar, Nav, NavItem } from 'react-bootstrap'
 
 const Contact = () => {
     return (
-        <div>
-            <nav className="navbar navbar-default">
-                <div className="container-fluid">
-                    <div className="navbar-header">
-                        <div className="navbar-text" id="navtitle">
+        <div class="outter">
+             <Grid fluid>
+                <Row className="navbar">
+                    <Col lg={1} >
+                    </Col>
+                    <Col lg={2}>
+                        <div className="navbar-title">
                             Nick Paridon
                         </div>
-                    </div>
-                    <ul className="nav navbar-nav navbar-right">
-                    <li><Link to="/">Home</Link></li>
-                    <li><Link to="/Contact">Contact</Link></li>
-                    <li><Link to="/Portfolio">Portfolio</Link></li>
-                    </ul>
-                </div>
-            </nav>
-            <div className="container" >
-                    <div className="row justify-content-md-center">
-                        <div className="col col-sm">
-                        </div>
-                        <div className="col-md-6 col-md-offset-3" id="inner">
+                    </Col>
+                    <Col lg={3} lgOffset={4}>
+                        <ul>
+                            <li><Link to="/">About Me </Link></li>   
+                            <li><Link to="/Portfolio">Portfolio </Link></li> 
+                            <li><Link to="/Contact">Contact</Link></li>   
+                        </ul>
+                    </Col>
+                    <Col lg={2}>
+                    </Col>
+                </Row>
+            </Grid>
+            <Grid>
+                <Row>
+                    <Col lg={6} lgOffset={3}>
+                        <div className="inner">
                             <h3>Contact</h3>
                             <hr/>
                             <form className="form-group" action="index.html" method="post">
@@ -37,11 +42,10 @@ const Contact = () => {
                                 <textarea name="entry" className="form-control input-lg" rows="5"></textarea>
                                 <input type="submit" name="submit" className="form-control input-lg" value="Submit" className="submit"/>
                             </form>                        
-                        <div className="col col-sm">
                         </div>
-                    </div>
-                </div>                        
-            </div>
+                    </Col>
+                </Row>
+            </Grid>
             <footer>
                 <div className="footer-copyright py-3 text-center">
                     © 2018 Copyright:

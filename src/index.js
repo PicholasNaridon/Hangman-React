@@ -1,10 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import 'typeface-roboto'
 import registerServiceWorker from './registerServiceWorker';
 import AppRouter from './Router/AppRouter';
-import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+import './assets/styles/reset.css'
+import './assets/styles/static.css'
 
 
 ReactDOM.render(<AppRouter />, document.getElementById('root'));
