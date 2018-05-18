@@ -2,12 +2,12 @@ import EnterGuess from './EnterGuess'
 import GuessList from './GuessList'
 import Score from './Score'
 import Board from './Board'
-import Display from './Display'
+import DisplayWord from './DisplayWord'
 
 export {
     EnterGuess,
     GuessList,
     Score,
-    Display,
+    DisplayWord,
     Board
 }

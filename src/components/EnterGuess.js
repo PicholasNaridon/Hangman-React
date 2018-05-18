@@ -6,7 +6,7 @@ class EnterGuess extends Component {
     constructor(props){
         super(props)
         this.state = {
-            currentGuess: '',
+            currentGuess: ''
         }
         this.handleGuess = this.handleGuess.bind(this)
         this.calcGuessLeft = this.calcGuessLeft.bind(this)

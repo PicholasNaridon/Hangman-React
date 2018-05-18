@@ -11,7 +11,7 @@ class Score extends Component {
         if (this.props.output.includes("_")){
             return (
                 <div className="score">
-                    <h1>Score: </h1>
+                    <h1>Score:</h1>
                     <h4 className="wins">{this.props.wins} Wins</h4>  
                     <h4 className="losses">{this.props.losses} Losses</h4>  
                 </div>

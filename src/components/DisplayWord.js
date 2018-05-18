@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Display = (props) => {
+const DisplayWord = (props) => {
     return (
         <div className="wordContainer">
             <div>{props.output}</div>
@@ -8,4 +8,4 @@ const Display = (props) => {
     );
 };
 
-export default Display;
+export default DisplayWord;

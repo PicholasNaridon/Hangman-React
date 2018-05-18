@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Score, Display, EnterGuess, GuessList } from './'
+import { Score, DisplayWord, EnterGuess, GuessList } from './'
 import _ from 'lodash'
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import RaisedButton from 'material-ui/RaisedButton';
@@ -80,7 +80,7 @@ class Board extends Component {
                 <Paper className="paper" zDepth={2}>
                     <div className="container">
                         <div className="title">Guess the US State!</div>
-                       <Display 
+                       <DisplayWord
                             output={this.sendOutput()}
                         />
                         <EnterGuess 
