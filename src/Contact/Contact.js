@@ -27,7 +27,7 @@ const Contact = () => {
                 <Grid className="lower-grid">
                     <Row>
                         <Col xs={12} lg={6} md={6} sm={6}>
-                            <div className="inner-title">About Me</div>
+                            <div className="inner-title">Contact</div>
                         </Col>
                     </Row>
                     <Row>
