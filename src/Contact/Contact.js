@@ -52,7 +52,7 @@ const Contact = () => {
                             </FormGroup>
                             <FormGroup>
                                 <Button bsStyle="primary" style={{backgroundColor: "#4aaaa5"}} bsSize="large" block>
-                                    Block level button
+                                   Submit
                                 </Button>
                             </FormGroup>
                         </Form>;
