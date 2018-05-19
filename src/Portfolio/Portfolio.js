@@ -14,10 +14,10 @@ const Portfolio = () => {
                     </Col>
                     <Col xs={12} sm={4} md={4} lg={4} >
                         <div className="navbar-links">
-                            <ul >
-                                <li><Link to="/">About Me </Link></li>   
-                                <li><Link to="/Portfolio">Portfolio </Link></li> 
-                                <li><Link to="/Contact">Contact</Link></li>   
+                            <ul>
+                                <li><Link className="links" to="/">About Me </Link></li>   
+                                <li><Link className="links" to="/Portfolio">Portfolio </Link></li> 
+                                <li><Link className="links" to="/Contact">Contact</Link></li>   
                             </ul>
                         </div>
                     </Col>
@@ -26,11 +26,13 @@ const Portfolio = () => {
             <Grid className="lower-grid">
                 <Row>
                     <Col xs={12} lg={6} md={6} sm={6}>
-                        <div className="inner-title">Portfolio</div>
+                        <div className="inner-title">About Me</div>
                     </Col>
                 </Row>
                 <Row>
-                    <div className="line"></div>
+                    <Col lg={10} xs={10} m={10} sm={10} xsOffset={1} smOffset={1} mdOffset={1} lgOffset={1} >
+                        <div className="hr" />
+                    </Col>
                 </Row>
                 <Row className="show-grid">
                     <Col xs={12} lg={6} md={6} sm={6}>
