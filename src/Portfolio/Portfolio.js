@@ -39,7 +39,7 @@ const Portfolio = () => {
                         <Col xs={12} lg={6} md={6} sm={12}>
                             <Link to="/Hangman" className="project-link">
                                 <img className="portfolio-picture" src={ require('../assets/images/hangman.png') } />
-                                <div className="project-overlay">Overlay</div>
+                                <div className="project-overlay">Hangman</div>
                             </Link>
                         </Col>
                         <Col xs={12} lg={6} md={6} sm={12}>
