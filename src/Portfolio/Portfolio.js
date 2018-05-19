@@ -2,52 +2,63 @@ import React from 'react';
 import { Link } from "react-router-dom";
 import { Grid, Col, Row, Nav, Navbar, NavItem } from 'react-bootstrap'
 
-
 const Portfolio = () => {
     return (
         <div class="outter">
-            <Grid fluid>
+           <Grid fluid={true} className="topBorder">
                 <Row className="navbar">
-                    <Col lgOffset={1} lg={2}>
+                    <Col xs={12} sm={4} md={4} lg={3}>
                         <div className="navbar-title">
                             Nick Paridon
                         </div>
                     </Col>
-                    <Col lg={3} lgOffset={4}>
-                        <ul>
-                            <li><Link to="/">About Me </Link></li>   
-                            <li><Link to="/Portfolio">Portfolio </Link></li> 
-                            <li><Link to="/Contact">Contact</Link></li>   
-                        </ul>
+                    <Col xs={12} sm={4} md={4} lg={4} >
+                        <div className="navbar-links">
+                            <ul >
+                                <li><Link to="/">About Me </Link></li>   
+                                <li><Link to="/Portfolio">Portfolio </Link></li> 
+                                <li><Link to="/Contact">Contact</Link></li>   
+                            </ul>
+                        </div>
                     </Col>
                 </Row>
             </Grid>
-            <div className="container">
-                <div className="row" >
-                    <h3>Portfolio</h3>
-                    <hr/>
-                    <div className="col-sm-3 col-md-3 col-lg-6" id="proj-img"><img src="./assets/images/react.png" className="img-responsive" />
-                        <Link to="/Hangman">Hangman</Link>
-                    </div>
-                    <div className="col-sm-3 col-md-3 col-lg-6" id="proj-img"><img src="./assets/images/react.png" className="img-responsive" />
-                        <p className="overlay">Project</p>
-                    </div>
-                    <div className="col-sm-3 col-md-3 col-lg-6" id="proj-img"><img src="./assets/images/react.png" className="img-responsive" />
-                        <p className="overlay">Project</p>
-                    </div>
-                    <div className="col-sm-3 col-md-3 col-lg-6" id="proj-img"><img src="./assets/images/react.png" className="img-responsive" />
-                        <p className="overlay">Project</p>
-                    </div>
-                    <div className="col-sm-3 col-md-3 col-lg-6" id="proj-img"><img src="./assets/images/react.png" className="img-responsive" />
-                        <p className="overlay">Project</p>
-                    </div>
+            <Grid className="lower-grid">
+                <Row>
+                    <Col xs={12} lg={6} md={6} sm={6}>
+                        <div className="inner-title">Portfolio</div>
+                    </Col>
+                </Row>
+                <Row>
+                    <div className="line"></div>
+                </Row>
+                <Row className="show-grid">
+                    <Col xs={12} lg={6} md={6} sm={6}>
+                        <Link to="/Hangman"><img className="portfolio-picture" src={ require('../assets/images/react.png') } /></Link>
+                    </Col>
+                    <Col xs={12} lg={6} md={6} sm={6}>
+                    <Link to="/Hangman"><img className="portfolio-picture" src={ require('../assets/images/react.png') } /></Link>
+                    </Col>
+                </Row>
+                <Row className="show-grid">
+                    <Col xs={12} lg={6} md={6} sm={6}>
+                        <Link to="/Hangman"><img className="portfolio-picture" src={ require('../assets/images/react.png') } /></Link>
+                    </Col>
+                    <Col xs={12} lg={6} md={6} sm={6}>
+                        <Link to="/Hangman"><img className="portfolio-picture" src={ require('../assets/images/react.png') } /></Link>
+                    </Col>
+                </Row>
+                <Row className="show-grid">
+                    <Col xs={12} lg={6} md={6} sm={6} >
+                        <Link to="/Hangman"><img className="portfolio-picture" src={ require('../assets/images/react.png') } /></Link>
+                    </Col>
+                </Row>
+            </Grid>
+            <Navbar fixedBottom={true} className="footer">
+                <div className="footer-copyright py-3 text-center">
+                    © 2018 Copyright:
                 </div>
-            </div>
-        <footer>
-            <div className="footer-copyright py-3 text-center">
-                © 2018 Copyright:
-            </div>
-        </footer>
+            </Navbar>
         </div>
     );
 };

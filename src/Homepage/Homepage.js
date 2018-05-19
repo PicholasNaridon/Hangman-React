@@ -5,14 +5,14 @@ import { Grid, Col, Row, Nav, Navbar, NavItem } from 'react-bootstrap'
 const Homepage = () => {
     return (
         <div class="outter">
-            <Grid fluid className="topBorder">
+            <Grid fluid={true} className="topBorder">
                 <Row className="navbar">
-                    <Col xs={12} sm={4} md={3} lg={2}>
+                    <Col xs={12} sm={4} md={4} lg={3}>
                         <div className="navbar-title">
                             Nick Paridon
                         </div>
                     </Col>
-                    <Col xs={12} sm={4} md={3} lg={2} >
+                    <Col xs={12} sm={4} md={4} lg={4} >
                         <div className="navbar-links">
                             <ul >
                                 <li><Link to="/">About Me </Link></li>   
@@ -23,12 +23,20 @@ const Homepage = () => {
                     </Col>
                 </Row>
             </Grid>
-            <Grid>
-                <Row>
-                    <Col lg={8} lgOffset={2}>
-                        <div className="inner">
-                            <h3>About Me</h3>
-                            <hr />
+            <div className="container">
+                <Grid className="lower-grid">
+                    <Row>
+                        <Col xs={12} lg={6} md={6} sm={6}>
+                            <div className="inner-title">Portfolio</div>
+                        </Col>
+                    </Row>
+                    <Row>
+                        <Col>
+                        <div className="line"></div>
+                        </Col>
+                    </Row>
+                    <Row style={{justifyContent: "center"}}>
+                        <Col lg={10} md={10} sm={10} xs={12}>
                             <div className="img-responsive">
                                 <img className="myPicture" src={ require('../assets/images/me.png') } />
                             </div>
@@ -37,15 +45,15 @@ const Homepage = () => {
                                 <p>Nam eget facilisis est, nec fringilla erat. Nam venenatis dapibus velit, ac efficitur turpis mattis a. Nam vitae lorem mollis, lacinia diam at, commodo tellus. Morbi eleifend pulvinar aliquam. Vivamus ac consectetur ligula. Nulla quis velit porttitor, aliquet velit non, consequat nibh. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Vestibulum finibus condimentum augue a tempus. Cras ac rutrum arcu, id rhoncus eros. In ornare urna sem, non tincidunt dui consequat ut. Donec posuere rutrum pulvinar. Cras interdum hendrerit purus, id cursus sem elementum non.</p>
                                 <p>Fusce at urna convallis, molestie libero a, tempus tortor. Nulla facilisi. Phasellus quam tortor, dapibus vitae arcu nec, venenatis vestibulum libero. Maecenas gravida dolor ut nisi accumsan vestibulum eu laoreet nunc. Phasellus vel nunc posuere, facilisis orci sit amet, feugiat arcu. Maecenas ullamcorper lacus lacus, ut accumsan purus facilisis nec. Nulla egestas eleifend elit, at suscipit orci. Morbi porta facilisis cursus. Vivamus iaculis ante id augue pharetra, at vehicula neque facilisis. Vestibulum nec est nec nunc tempor pulvinar. Vivamus ac sodales tellus. Maecenas quis efficitur nunc, id cursus sem.</p>
                             </div>
-                        </div>
-                    </Col>
-                </Row>
-            </Grid>
-            <footer>
+                        </Col>
+                    </Row>
+                </Grid>
+            </div>
+            <Navbar fixedBottom={true} className="footer">
                 <div className="footer-copyright py-3 text-center">
                     © 2018 Copyright:
                 </div>
-            </footer>
+            </Navbar>
         </div>
     );
 };
