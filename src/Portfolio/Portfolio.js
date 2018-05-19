@@ -36,13 +36,13 @@ const Portfolio = () => {
                         </Col>
                     </Row>
                     <Row className="show-grid">
-                        <Col xs={12} lg={6} md={6} sm={6}>
+                        <Col xs={12} lg={6} md={6} sm={12}>
                             <Link to="/Hangman" className="project-link">
                                 <img className="portfolio-picture" src={ require('../assets/images/hangman.png') } />
                                 <div className="project-overlay">Overlay</div>
                             </Link>
                         </Col>
-                        <Col xs={12} lg={6} md={6} sm={6}>
+                        <Col xs={12} lg={6} md={6} sm={12}>
                             <Link to="/Hangman" className="project-link">
                                 <img className="portfolio-picture" src={ require('../assets/images/300x300.png') } />
                                 <div className="project-overlay">Placeholder</div>
@@ -50,13 +50,13 @@ const Portfolio = () => {
                         </Col>
                     </Row>
                     <Row className="show-grid">
-                        <Col xs={12} lg={6} md={6} sm={6}>
+                        <Col xs={12} lg={6} md={6} sm={12}>
                             <Link to="/Hangman" className="project-link">
                                 <img className="portfolio-picture" src={ require('../assets/images/300x300.png') } />
                                 <div className="project-overlay">Placeholder</div>
                             </Link>
                         </Col>
-                        <Col xs={12} lg={6} md={6} sm={6}>
+                        <Col xs={12} lg={6} md={6} sm={12}>
                             <Link to="/Hangman" className="project-link">
                                 <img className="portfolio-picture" src={ require('../assets/images/300x300.png') } />
                                 <div className="project-overlay">Placeholder</div>
@@ -64,7 +64,7 @@ const Portfolio = () => {
                         </Col>
                     </Row>
                     <Row className="show-grid">
-                        <Col xs={12} lg={6} md={6} sm={6} >
+                        <Col xs={12} lg={6} md={6} sm={12} >
                             <Link to="/Hangman" className="project-link">
                                 <img className="portfolio-picture" src={ require('../assets/images/300x300.png') } />
                                 <div className="project-overlay">Placeholder</div>
@@ -82,4 +82,4 @@ const Portfolio = () => {
     );
 };
 
-export default Portfolio;
+export default Portfolio;       

@@ -37,25 +37,25 @@ const Contact = () => {
                     </Row>
                     <Row style={{justifyContent: "center"}}>
                         <Col lg={10} md={10} sm={10} xs={12}>
-                        <Form >
-                            <div className="form-label"> Name </div>
-                            <FormGroup controlId="formControlsText">
-                                <FormControl componentClass="text" placeholder="Name" />
-                            </FormGroup>
-                            <div className="form-label"> Email </div>
-                            <FormGroup controlId="formControlsEmail">
-                                <FormControl componentClass="email" placeholder="Email" />
-                            </FormGroup>
-                            <div className="form-label"> Message </div>
-                            <FormGroup controlId="formControlsTextarea">
-                                <FormControl componentClass="textarea" placeholder="" />
-                            </FormGroup>
-                            <FormGroup>
-                                <Button bsStyle="primary" style={{backgroundColor: "#4aaaa5"}} bsSize="large" block>
-                                   Submit
-                                </Button>
-                            </FormGroup>
-                        </Form>;
+                            <Form >
+                                <div className="form-label"> Name </div>
+                                <FormGroup controlId="formControlsText">
+                                    <FormControl componentClass="text" placeholder="Name" />
+                                </FormGroup>
+                                <div className="form-label"> Email </div>
+                                <FormGroup controlId="formControlsEmail">
+                                    <FormControl componentClass="email" placeholder="Email" />
+                                </FormGroup>
+                                <div className="form-label"> Message </div>
+                                <FormGroup controlId="formControlsTextarea">
+                                    <FormControl componentClass="textarea" placeholder="" />
+                                </FormGroup>
+                                <FormGroup>
+                                    <Button bsStyle="primary" style={{backgroundColor: "#4aaaa5"}} bsSize="large" block>
+                                    Submit
+                                    </Button>
+                                </FormGroup>
+                            </Form>;
                         </Col>
                     </Row>
                 </Grid>
