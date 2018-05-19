@@ -46,7 +46,7 @@ const Homepage = () => {
                                 <img className="myPicture" src={ require('../assets/images/me.png') } />
                             </div>
                             <div className="text">
-                            <p>Hi everyone! My name is Nick, I am an engineer working and living in Philadelphia. </p>
+                                <p>Hey everyone! My name is Nick, I am an engineer working and living in Philadelphia. </p>
                                 <p>This page and the projects linked here were built mainly with React and React Router, with a few Ruby on Rails applications thrown in </p>
                                 <p>In my free time I enjoy being outdoors, hiking, swimming, etc. I am a big fan of traveling as well. Please feel free to poke around. Send me a message! </p>
                                 <p>Here's some fillter text for the sake of symmetry</p>
