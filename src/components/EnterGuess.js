@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import TextField from 'material-ui/TextField';
-import {blue400, blue500} from 'material-ui/styles/colors';
+import { FormGroup, FormControl} from 'react-bootstrap'
 
 class EnterGuess extends Component {
     constructor(props){
@@ -30,12 +29,12 @@ class EnterGuess extends Component {
         if (this.calcGuessLeft() > 0){
             return (
                 <div>
-                    <TextField
-                        value={this.state.currentGuess}
-                        hintText={"Guess"}
-                        underlineStyle={{borderColor: blue400}}
-                        onChange={this.handleGuess} 
-                    />
+                    <FormGroup>
+                        <FormControl
+                            value={this.state.currentGuess}
+                            onChange={this.handleGuess} 
+                        />
+                    </FormGroup>
                     <div className="remaining">Remaining: {this.calcGuessLeft()}</div>
                 </div>
             );
