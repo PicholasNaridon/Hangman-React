@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import TextField from 'material-ui/TextField';
-import {blue400, blue500} from 'material-ui/styles/colors';
 import { FormGroup, FormControl} from 'react-bootstrap'
 
 class EnterGuess extends Component {
